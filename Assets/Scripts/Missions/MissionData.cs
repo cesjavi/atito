@@ -4,17 +4,18 @@ using UnityEngine;
 [Serializable]
 public class MissionData
 {
-    public string missionId;
+    public string duelId;
     public string title;
-    [TextArea] public string description;
-    public MissionState state;
-    public int reward;
+    [TextArea] public string rivalStyle;
+    public DuelState state;
+    public int requiredStylePoints;
+    public int hypeReward;
 }
 
-public enum MissionState
+public enum DuelState
 {
     NotStarted,
     InProgress,
-    Completed,
-    Failed
+    Won,
+    Lost
 }
