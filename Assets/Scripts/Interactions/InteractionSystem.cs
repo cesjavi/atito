@@ -18,7 +18,7 @@ public class InteractionSystem : MonoBehaviour
     {
         UpdateCurrentTarget();
 
-        if (Input.GetKeyDown(KeyCode.E) && CurrentTarget != null)
+        if (Input.GetKeyDown(KeyCode.F) && CurrentTarget != null)
         {
             CurrentTarget.Interact(gameObject);
         }

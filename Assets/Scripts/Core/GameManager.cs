@@ -4,7 +4,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public int Money { get; private set; }
+    public int CrowdHype { get; private set; }
+    public int Victories { get; private set; }
 
     private void Awake()
     {
@@ -18,8 +19,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void AddMoney(int amount)
+    public void AddHype(int amount)
     {
-        Money = Mathf.Max(0, Money + amount);
+        CrowdHype = Mathf.Max(0, CrowdHype + amount);
+    }
+
+    public void RegisterVictory()
+    {
+        Victories++;
     }
 }
